@@ -1,0 +1,60 @@
+.welcome-banner {
+    width: 100%;
+    display: flex;
+    padding: 15px;
+    background: linear-gradient(229.5deg,#fa0,#ff7100);
+    justify-content: space-between;
+    margin-bottom: 15px;
+
+    .logo-img {
+        display: none;
+    }
+
+    .welcome-text-container {
+        >h1 {
+            font-size: 1.75rem;
+            line-height: 40px;
+            margin-bottom: 0;
+        }
+        >h4 {
+            font-size: 1rem;
+            margin-top: 5px;
+        }
+    }
+
+    * {
+        font-weight: 400;
+        text-shadow: 0 1px 2px rgba(0,0,0,.2);
+        color: #fff;
+    }
+
+    >img {
+        max-width: 45%;
+    }
+}
+
+@media (min-width: 880px) {
+    .welcome-banner {
+        width: 285px;
+        padding: 30px;
+        flex-direction: column;
+        margin: 0;
+
+        .logo-img {
+            display: block;
+        }
+
+        .welcome-text-container {
+            >h1 {
+                font-size: 2.5rem;
+            }
+            >h4 {
+                font-size: 1.3rem;
+            }
+        }
+
+        >img {
+            max-width: 100%;
+        }
+    }
+}

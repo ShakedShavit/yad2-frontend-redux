@@ -1,0 +1,134 @@
+.advanced-search {
+    background-color: #fff;
+    width: 100%;
+    max-width: 695px;
+    margin: auto;
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,.1);
+    padding: 20px;
+    border-radius: 4px;
+    position: relative;
+
+    >h3 {
+        margin: 0;
+        .link-span {
+            text-decoration: underline dotted;
+        }
+    }
+
+    .search-btn {
+        color: white;
+        background-color: #ff7100;
+        margin: 20px auto 0 auto;
+
+        &:hover {
+            background-color: #da6200;
+        }
+    }
+
+    >form {
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        * {
+            font-size: .95rem;
+        }
+
+        label {
+            margin: 10px 0 5px 0;
+            display: block;
+        }
+
+        input, .div-input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+
+        .div-input {
+            width: 25%;
+            min-width: 170px;
+            position: relative;
+            display: flex;
+
+            .placeholder {
+                color: grey;
+            }
+            .fake-input {
+                padding: 0;
+                border: none;
+                width: calc(100% - 20px);
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .select-container {
+            position: absolute;
+            right: 0;
+            z-index: 50;
+            top: calc(100% + 1px);
+            background-color: #fff;
+            box-shadow: 0 2px 6px 0 rgba(0,0,0,.1);
+        }
+        
+        .types-select-container {
+            min-width: 280px;
+            z-index: 10;
+            
+            .types-select-footer {
+                padding: 15px;
+                width: 100%;
+                border-top: 1px solid #eee;
+                text-align: left;
+
+                span {
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    .auto-complete-wrapper {
+        input {
+            border: 1px solid #ccc;
+        }
+
+        .input-options-container {
+            max-width: 196px;
+            position: absolute;
+            z-index: 15;
+            background: #fff;
+            max-height: 322px;
+            overflow-y: scroll;
+        }
+    }
+
+    .reset-search-btn {
+        position: absolute;
+        bottom: 30px;
+        left: 40px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+@media (min-width: 880px) {
+    .advanced-search {
+        >form {
+            .sdf {
+                margin: auto;
+            }
+
+            .div-input, input {
+                width: 100%;
+            }
+        }   
+    }
+}

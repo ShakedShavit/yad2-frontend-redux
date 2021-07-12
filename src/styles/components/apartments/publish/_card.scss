@@ -1,0 +1,106 @@
+.publish-card {
+    position: relative;
+    width: 100%;
+    max-width: 880px;
+    border-radius: 5px;
+    background-color: #fff;
+    text-align: right;
+    font-size: 17px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    margin: 0 auto 15px auto;
+
+    .page-title {
+        margin-right: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        column-gap: 20px;
+
+        img {
+            width: 24px;
+        }
+        .page-num-circle {
+            width: 26px;
+            height: 26px;
+            padding: 2px 1px 0 0;
+            border: 1px solid black;
+            border-radius: 50px;
+            color: #0fca80;
+            border: 2px solid #0fca80;
+            font-size: 18px;
+            font-weight: 600;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }  
+    }
+
+    .page-title-wrapper {
+        margin: 20px 0;
+
+        h2 {
+            font-weight: 400;
+            font-size: 22px;
+            margin: 0;
+        }
+    }
+}
+
+.curr-page {
+    box-shadow: 0 2px 4px 0 rgba(12,0,51,.1);
+    overflow: auto;
+    color: #0d0d0d;
+}
+.finished-page {
+    box-shadow: 0 2px 4px 0 rgba(12,0,51,.1);
+    color: #acacac;
+    font-weight: 300;
+    position: relative;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    .finished-page-info {
+        text-decoration: underline;
+        font-size: 14px;
+    }
+
+    .edit-page-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        column-gap: 5px;
+        position: absolute;
+        width: 87px;
+        height: 30px;
+        border-radius: 20px;
+        background-color: #eee;
+        color: #999;
+        font-weight: 500;
+        left: 3%;
+        top: 30%;
+
+        img {
+            opacity: 0.5;
+            width: 17px;
+            height: 17px;
+        }
+    }
+}
+.later-page {
+    color: #b9b9b9;
+    font-weight: 400;
+    border: 1px solid #e6e6e6;
+
+    .page-title {
+        .page-num-circle {
+            border-color: #ccc;
+            color: #999;
+        }
+    }
+}

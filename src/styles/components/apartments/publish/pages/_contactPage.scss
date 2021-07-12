@@ -1,0 +1,186 @@
+.contact-page-content {
+    form {
+        .phone-number-wrapper {
+            width: calc(100% - 15px);
+            display: grid;
+            grid-template-columns: 70% 30%;
+            column-gap: 15px;
+        }
+
+        .contact-button {
+            width: 61.5%;
+            border: 1px solid;
+            border-radius: 4px;
+            height: 46px;
+            font-size: 14px;
+            font-weight: 700;
+            padding: 0 22px;
+            padding: 0 2.2em 0 1.6em;
+            position: relative;
+            margin-top: 40px;
+
+            &:hover {
+                color: white;
+                border: none;
+            }
+            
+            .contact-icon {
+                position: absolute;
+                right: 2.2em;
+            }
+        }
+        .valid-contact-button {
+            color: #4dd8a1;
+            border-color: #4dd8a1;
+            background-color: #dff7ed;
+
+            &:hover {
+                background-color: #4dd8a1;
+            }
+        }
+        .invalid-contact-button {
+            color: #ff7100;
+            border-color: #ff7100;
+            background-color: #fff;
+            &:hover {
+                background-color: #ff7100;
+            }
+        }
+
+        .new-contact-info-container {
+            margin: 50px 0;
+
+            .new-contact-footer {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                column-gap: 20px;
+            }
+        }
+
+        .add-contact-container {
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            column-gap: 5px;
+        }
+
+        .remove-new-contact__container {
+            width: fit-content;
+            opacity: 0.8;
+
+            span {
+                margin-right: 5px;
+            }
+
+            &:hover {
+                color: #ff7100;
+                cursor: pointer;
+                opacity: 1;
+            }
+        }
+
+        .checkbox-container__contact-on-weekend {
+            margin-bottom: 30px;
+
+            .smaller-checkbox {
+                width: 13px;
+                height: 13px;
+            }
+            >span {
+                margin-top: 4px;
+                margin-right: 2px;
+            }
+        }
+
+        .checkbox-container-required {
+            margin-top: 20px;
+            font-weight: 700;
+            width: 100%;
+            padding: 8px 13px 8px 0;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+        }
+    }
+    
+}
+
+@media (min-width: 880px) {
+    .contact-page-content {
+        form {
+            input, select {
+                height: 40px;
+            }
+
+            .desktop-contact-container {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                column-gap: 5px;
+                justify-content: flex-start;
+                position: relative;
+                
+                .phone-number-wrapper {
+                    column-gap: 5px;
+                }
+
+                .input-contact-container {
+                    display: flex;
+                    flex-direction: column;
+
+                    * {
+                        width: 100%;
+                    }
+                }
+
+                .input-contact-container:first-of-type {
+                    width: 240px;
+                }
+            }
+
+            .desktop-validate-btn-container {
+                align-self: flex-end;
+                margin-right: 5px;
+            }
+
+            .remove-new-contact__container {
+                display: flex;
+                flex-direction: row;
+            }
+
+            .contact-button {
+                position: relative;
+                margin: 0;
+                height: 40px;
+                width: 162px;
+                padding: 0;
+                
+                .contact-icon {
+                    position: relative;
+                    right: 0;
+                    margin-left: 5px;
+                }
+            }
+
+            .new-contact-footer {
+                padding: 0;
+                height: 40px;
+                margin: 35px 5px 0 0;
+            }
+
+            .contact-validate-err {
+                position: absolute;
+                top: 70px;
+                left: 150px;
+            }
+
+            .add-contact-container {
+                margin-bottom: 10px;
+            }
+
+            .input-err-msg {
+                font-size: 13px;
+            }
+        }
+    }
+}
